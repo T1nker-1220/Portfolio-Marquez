@@ -15,7 +15,7 @@ const ParticlesBackground = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const particles: any[] = [];
+    const particles: Particle[] = [];
     const particleCount = 100;
 
     class Particle {
@@ -25,8 +25,7 @@ const ParticlesBackground = () => {
       speedX: number;
       speedY: number;
       color: string;
-
-      constructor() {
+      constructor(canvas: HTMLCanvasElement) {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 3;
@@ -38,11 +37,12 @@ const ParticlesBackground = () => {
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
-
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
+        if (canvas) {
+          if (this.x > canvas.width) this.x = 0;
+          if (this.x < 0) this.x = canvas.width;
+          if (this.y > canvas.height) this.y = 0;
+          if (this.y < 0) this.y = canvas.height;
+        }
       }
 
       draw() {
@@ -53,9 +53,8 @@ const ParticlesBackground = () => {
         ctx.fill();
       }
     }
-
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle(canvas));
     }
 
     const animate = () => {
