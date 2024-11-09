@@ -33,7 +33,7 @@ const About = () => {
               <p className="text-gray-300 leading-relaxed">
                 I am an aspiring web designer with a passion for creating visually appealing 
                 and user-friendly websites. With a solid understanding of HTML and CSS, 
-                I'm excited to explore the world of web design further.
+                I&apos;m excited to explore the world of web design further.
               </p>
             </motion.div>
 

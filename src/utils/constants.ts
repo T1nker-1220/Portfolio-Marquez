@@ -8,7 +8,7 @@ export const personalInfo = {
   skills: [
     "Web Developer",
     "Web Designer",
-    "Editing Images",
+    "Video Editor",
     "Image Designs",
     "Content Creator"
   ],
@@ -25,19 +25,19 @@ export const projects = [
   {
     title: "Weather API",
     description: "Weather application that provides real-time weather information for cities worldwide",
-    image: "/weather-app.jpg",
-    link: "#"
+    image: "/weather-app.png",
+    link: "https://weather-api-s.vercel.app/"
   },
   {
-    title: "Company Website",
-    description: "Corporate website showcasing services and company information",
-    image: "/company-website.jpg",
-    link: "#"
+    title: "Kusina De Amadeo",
+    description: "Kusina De Amadeo is a website that showcases the best dishes and recipes from Amadeo, Cavite.",
+    image: "/kda.png",
+    link: "https://kusina-de-amadeo.vercel.app/"
   },
   {
     title: "YouTube Channel",
     description: "Content creation and channel management",
-    image: "/youtube-channel.jpg",
-    link: "#"
+    image: "/youtube.png",
+    link: "https://www.youtube.com/@t1nkergaming731"
   }
 ]; 

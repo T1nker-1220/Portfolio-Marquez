@@ -29,7 +29,7 @@ const Hero = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Hi, I'm{' '}
+          Hi, I&apos;m{' '}
           <span className="gradient-text">
             John Nathaniel Marquez
           </span>
